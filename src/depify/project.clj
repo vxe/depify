@@ -171,12 +171,13 @@
 
 (def ^:dynamic default-deps-template
   {:aliases
+   ;; include depify for subsequent run
    {:depify {:extra-deps {org.clojure/clojure {:mvn/version "1.9.0"}
                           depify              {:git/url "https://github.com/vxe/depify"
-                                               :sha     "1713dac1b136216455832ea4d622b609fc19d8db"}}
+                                               :sha     "4a997900346c512e2907fc004eff3456206a8de6"}}
              :main-opts  ["-m" "depify.project"]}
     :zprint {:extra-deps {org.clojure/clojure {:mvn/version "1.9.0"}
-                                 zprint              {:mvn/version "0.4.9"}}
+                          zprint              {:mvn/version "0.4.9"}}
              :main-opts  ["-m" "zprint.main"]}
     :test   {:extra-paths ["test"]
              :extra-deps  {'org.clojure/test.check {:mvn/version "RELEASE"}}}
