@@ -171,7 +171,14 @@
 
 (def ^:dynamic default-deps-template
   {:aliases
-   {:test   {:extra-paths ["test"]
+   {:depify {:extra-deps {org.clojure/clojure {:mvn/version "1.9.0"}
+                          depify              {:git/url "https://github.com/hagmonk/depify"
+                                               :sha     "04329744872890711dbba8939a16e9987dd33bb3"}}
+             :main-opts  ["-m" "depify.project"]}
+    :zprint {:extra-deps {org.clojure/clojure {:mvn/version "1.9.0"}
+                                 zprint              {:mvn/version "0.4.9"}}
+             :main-opts  ["-m" "zprint.main"]}
+    :test   {:extra-paths ["test"]
              :extra-deps  {'org.clojure/test.check {:mvn/version "RELEASE"}}}
     :runner {:extra-deps {'com.cognitect/test-runner
                           {:git/url "https://github.com/cognitect-labs/test-runner"
