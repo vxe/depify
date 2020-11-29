@@ -172,8 +172,8 @@
 (def ^:dynamic default-deps-template
   {:aliases
    {:depify {:extra-deps {org.clojure/clojure {:mvn/version "1.9.0"}
-                          depify              {:git/url "https://github.com/hagmonk/depify"
-                                               :sha     "04329744872890711dbba8939a16e9987dd33bb3"}}
+                          depify              {:git/url "https://github.com/vxe/depify"
+                                               :sha     "1713dac1b136216455832ea4d622b609fc19d8db"}}
              :main-opts  ["-m" "depify.project"]}
     :zprint {:extra-deps {org.clojure/clojure {:mvn/version "1.9.0"}
                                  zprint              {:mvn/version "0.4.9"}}
